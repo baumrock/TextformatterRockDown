@@ -47,7 +47,3 @@ $wire->addHookAfter("TextformatterRockDown::replace", function ($event) {
   $event->return = $str;
 });
 ```
-
-```
-
-```
