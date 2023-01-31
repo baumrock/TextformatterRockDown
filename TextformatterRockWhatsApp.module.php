@@ -13,7 +13,7 @@ class TextformatterRockWhatsApp extends Textformatter
   {
     return [
       'title' => 'WhatsApp Like Textformatter',
-      'version' => '1.0.0',
+      'version' => '1.1.0',
       'summary' => 'ProcessWire Textformatter for simple WhatsApp style text formatting (*bold*, _italic_, ~strike~, ```mono```)',
     ];
   }
@@ -27,5 +27,14 @@ class TextformatterRockWhatsApp extends Textformatter
     $str = preg_replace("/$start~(.*?)~$end/", "$1<s>$2</s>$3", $str);
     $str = preg_replace("/$start```(.*?)```$end/", "$1<tt>$2</tt>$3", $str);
     $str = preg_replace("/$start#(.*?)#$end/", "$1<tt>$2</tt>$3", $str);
+    $str = $this->replace($str, $start, $end);
+  }
+
+  /**
+   * Add hookable replace method
+   */
+  public function ___replace($str, $start, $end)
+  {
+    return $str;
   }
 }
