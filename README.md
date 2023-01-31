@@ -25,7 +25,11 @@ One solution is to create a CKEditor/TinyMCE field, but it's a lot more tedious 
 
 Just apply this textformatter to your field and you'll get quick and easy headlines with bold and italic fonts that will also work with frontend editing.
 
-Editing:
+Backend Editing:
+
+<img src=https://i.imgur.com/sGpqZPO.png width=500>
+
+Frontend Editing:
 
 <img src=https://i.imgur.com/AC36me2.png width=300>
 
