@@ -1,4 +1,4 @@
-# TextformatterRockWhatsApp
+# TextformatterRockDown
 
 ProcessWire Textformatter for simple WhatsApp style text formatting:
 
@@ -44,7 +44,7 @@ Formatted:
 You can add custom replacements easily via hook in `/site/ready.php`
 
 ```php
-$wire->addHookAfter("TextformatterRockWhatsApp::replace", function ($event) {
+$wire->addHookAfter("TextformatterRockDown::replace", function ($event) {
   $str = $event->arguments(0);
   $start = $event->arguments(1);
   $end = $event->arguments(2);

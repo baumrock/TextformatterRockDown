@@ -7,14 +7,14 @@ namespace ProcessWire;
  * @license Licensed under MIT
  * @link https://www.baumrock.com
  */
-class TextformatterRockWhatsApp extends Textformatter
+class TextformatterRockDown extends Textformatter
 {
   public static function getModuleInfo()
   {
     return [
-      'title' => 'WhatsApp Like Textformatter',
+      'title' => 'Markdown-like Textformatter for Headlines',
       'version' => '1.1.0',
-      'summary' => 'ProcessWire Textformatter for simple WhatsApp style text formatting (*bold*, _italic_, ~strike~, ```mono```)',
+      'summary' => 'ProcessWire Textformatter for simple markdown style text formatting (*bold*, _italic_, ~strike~, ```mono```)',
     ];
   }
 
