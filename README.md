@@ -15,6 +15,8 @@ Additional non-WhatsApp formats:
 #monospace#
 ```
 
+This module does intentionally not support full markdown syntax! It is intended to be used for simple formattings that you usually want to apply to headlines.
+
 ## Problem
 
 The `title` field is always available in ProcessWire and it is often used for page headlines. But unfortunately when using such a plain textfield it will not be possible to print some words in bold or italic font.
