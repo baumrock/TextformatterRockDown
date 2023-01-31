@@ -23,7 +23,7 @@ One solution is to create a CKEditor/TinyMCE field, but it's a lot more tedious 
 
 ## Solution
 
-Just apply this textformatter to your field and you'll get quick and easy headlines with bold and italic fonts.
+Just apply this textformatter to your field and you'll get quick and easy headlines with bold and italic fonts that will also work with frontend editing.
 
 Editing:
 
