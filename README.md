@@ -1,17 +1,12 @@
 # TextformatterRockDown
 
-ProcessWire Textformatter for simple WhatsApp style text formatting:
+ProcessWire Textformatter for simple markdown-like text formatting ideal for headlines:
 
 ````
 *bold*
 _italic_
 ~strike~
 ```monospace```
-````
-
-Additional non-WhatsApp formats:
-
-```
 #monospace#
 ```
 
@@ -52,3 +47,4 @@ $wire->addHookAfter("TextformatterRockDown::replace", function ($event) {
   $event->return = $str;
 });
 ```
+````
