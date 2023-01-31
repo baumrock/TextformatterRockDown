@@ -8,7 +8,7 @@ _italic_
 ~strike~
 ```monospace```
 #monospace#
-```
+````
 
 This module does intentionally not support full markdown syntax! It is intended to be used for simple formattings that you usually want to apply to headlines.
 
@@ -47,4 +47,7 @@ $wire->addHookAfter("TextformatterRockDown::replace", function ($event) {
   $event->return = $str;
 });
 ```
-````
+
+```
+
+```
