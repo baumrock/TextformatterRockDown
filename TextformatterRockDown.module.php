@@ -13,7 +13,7 @@ class TextformatterRockDown extends Textformatter
   {
     return [
       'title' => 'Markdown-like Textformatter for Headlines',
-      'version' => '1.1.0',
+      'version' => '1.2.0',
       'summary' => 'ProcessWire Textformatter for simple markdown style text formatting (*bold*, _italic_, ~strike~, ```mono```)',
     ];
   }
