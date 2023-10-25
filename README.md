@@ -52,11 +52,13 @@ echo $page->edit('title'); // fontend editable
 You can add custom replacements easily via hook in `/site/ready.php`
 
 ```php
+// @something@ --> <span style="color:red;">something</span>
 $wire->addHookAfter("TextformatterRockDown::replace", function ($event) {
   $str = $event->arguments(0);
   $start = $event->arguments(1);
   $end = $event->arguments(2);
-  $str = preg_replace("/$start@(.*?)@$end/", "$1<span style=\"color:red;\">$2</span>$3", $str);
+  $tag = "@"; // set your tag here
+  $str = preg_replace("/$start{$tag}(.*?){$tag}$end/", "$1<span style=\"color:red;\">$2</span>$3", $str);
   $event->return = $str;
 });
 ```
