@@ -58,7 +58,11 @@ $wire->addHookAfter("TextformatterRockDown::replace", function ($event) {
   $start = $event->arguments(1);
   $end = $event->arguments(2);
   $tag = "@"; // set your tag here
-  $str = preg_replace("/$start{$tag}(.*?){$tag}$end/", "$1<span style=\"color:red;\">$2</span>$3", $str);
+  $str = preg_replace(
+    "/$start{$tag}(.*?){$tag}$end/",
+    "$1<span style=\"color:red;\">$2</span>$3",
+    $str
+  );
   $event->return = $str;
 });
 ```
