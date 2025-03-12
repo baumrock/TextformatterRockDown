@@ -18,17 +18,17 @@ class TextformatterRockDown extends Textformatter
     ];
   }
 
-  public function format(&$str)
+  public function format(&$str) 
   {
-    $start = "(^| )"; // allowed start
-    $end = "($|\W)"; // allowed ending whitespace
-    $str = preg_replace("/$start\*(.*?)\*$end/", "$1<strong>$2</strong>$3", $str);
-    $str = preg_replace("/$start\_(.*?)_$end/", "$1<em>$2</em>$3", $str);
-    $str = preg_replace("/$start~(.*?)~$end/", "$1<s>$2</s>$3", $str);
-    $str = preg_replace("/$start```(.*?)```$end/", "$1<tt>$2</tt>$3", $str);
-    $str = preg_replace("/$start#(.*?)#$end/", "$1<tt>$2</tt>$3", $str);
+    $start = "(?<=^|\\s)"; // lookbehind for start or whitespace
+    $end = "(?=\\s|$)"; // lookahead for whitespace or end
+    $str = preg_replace("/$start\\*(.*?)\\*$end/", "<strong>$1</strong>", $str);
+    $str = preg_replace("/$start\\_(.*?)\\_$end/", "<em>$1</em>", $str);
+    $str = preg_replace("/$start~(.*?)~$end/", "<s>$1</s>", $str);
+    $str = preg_replace("/$start```(.*?)```$end/", "<tt>$1</tt>", $str);
+    $str = preg_replace("/$start#(.*?)#$end/", "<tt>$1</tt>", $str);
     $str = $this->replace($str, $start, $end);
-  }
+ }
 
   /**
    * Add hookable replace method
